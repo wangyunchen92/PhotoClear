@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PictureClearListViewController">
+            <connections>
+                <outlet property="firstView" destination="vYp-vn-aXZ" id="McG-St-zjR"/>
+                <outlet property="firstViewButton" destination="tuI-Vr-s0d" id="wwa-2J-7cj"/>
+                <outlet property="firstViewLabel" destination="R49-1W-93x" id="eHx-XW-Pe8"/>
+                <outlet property="secendView" destination="kC2-4J-uM6" id="Pnd-KB-N82"/>
+                <outlet property="secendViewButton" destination="8Ei-P9-sKi" id="Ybh-sl-86Q"/>
+                <outlet property="secendViewLabel" destination="h2P-ui-lc8" id="G3A-yQ-jO8"/>
+                <outlet property="threeView" destination="XVn-WA-mYa" id="9EU-Bp-4an"/>
+                <outlet property="threeViewButton" destination="vqO-9f-0cE" id="Ig3-dH-bKe"/>
+                <outlet property="threeViewLabel" destination="mW1-uN-uOw" id="DGX-jP-DLa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="照片清理_bg" translatesAutoresizingMaskIntoConstraints="NO" id="PWq-Oa-W4E">
+                    <rect key="frame" x="0.0" y="64" width="375" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="88" id="kSo-nL-nMh"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYp-vn-aXZ">
+                    <rect key="frame" x="12" y="110" width="351" height="76"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="照片清理_重复照片" translatesAutoresizingMaskIntoConstraints="NO" id="1Gx-y8-iFL">
+                            <rect key="frame" x="20" y="21.5" width="33" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="33" id="F0V-nP-W9a"/>
+                                <constraint firstAttribute="height" constant="33" id="rSF-X1-Gz0"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="重复照片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnR-M4-Hox">
+                            <rect key="frame" x="74" y="17.5" width="65.5" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tuI-Vr-s0d">
+                            <rect key="frame" x="269" y="23" width="62" height="30"/>
+                            <state key="normal" title="前往清理"/>
+                            <connections>
+                                <action selector="firstViewClick:" destination="-1" eventType="touchUpInside" id="7q1-Mi-YeC"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="照片清理_箭头" translatesAutoresizingMaskIntoConstraints="NO" id="B2j-ma-T3p">
+                            <rect key="frame" x="337" y="31" width="6" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="6" id="c3D-lg-mwF"/>
+                                <constraint firstAttribute="height" constant="14" id="nBg-ra-5J4"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R49-1W-93x">
+                            <rect key="frame" x="74" y="47" width="7" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.53725490196078429" green="0.58431372549019611" blue="0.63137254901960782" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="R49-1W-93x" firstAttribute="top" secondItem="gnR-M4-Hox" secondAttribute="bottom" constant="10" id="2fc-7h-eDt"/>
+                        <constraint firstAttribute="height" constant="76" id="GMX-yk-Jyn"/>
+                        <constraint firstAttribute="trailing" secondItem="B2j-ma-T3p" secondAttribute="trailing" constant="8" id="J9d-qz-VhR"/>
+                        <constraint firstItem="B2j-ma-T3p" firstAttribute="centerY" secondItem="vYp-vn-aXZ" secondAttribute="centerY" id="U22-Bl-JRl"/>
+                        <constraint firstAttribute="trailing" secondItem="tuI-Vr-s0d" secondAttribute="trailing" constant="20" id="VAf-m9-JrY"/>
+                        <constraint firstItem="1Gx-y8-iFL" firstAttribute="centerY" secondItem="vYp-vn-aXZ" secondAttribute="centerY" id="Z59-aV-6Ju"/>
+                        <constraint firstItem="gnR-M4-Hox" firstAttribute="leading" secondItem="1Gx-y8-iFL" secondAttribute="trailing" constant="21" id="cZI-an-uw9"/>
+                        <constraint firstItem="tuI-Vr-s0d" firstAttribute="centerY" secondItem="vYp-vn-aXZ" secondAttribute="centerY" id="fMy-p8-L1B"/>
+                        <constraint firstItem="R49-1W-93x" firstAttribute="leading" secondItem="gnR-M4-Hox" secondAttribute="leading" id="gM7-3j-lq2"/>
+                        <constraint firstItem="1Gx-y8-iFL" firstAttribute="leading" secondItem="vYp-vn-aXZ" secondAttribute="leading" constant="20" id="lvr-no-TUQ"/>
+                        <constraint firstItem="gnR-M4-Hox" firstAttribute="centerY" secondItem="vYp-vn-aXZ" secondAttribute="centerY" constant="-10" id="nON-Lo-pNd"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="qaD-5D-xZS" appends="YES" id="H93-tP-dVE"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kC2-4J-uM6">
+                    <rect key="frame" x="10" y="206" width="355" height="76"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="照片清理_截图" translatesAutoresizingMaskIntoConstraints="NO" id="OY3-wb-q0b">
+                            <rect key="frame" x="20" y="21.5" width="33" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="33" id="Mck-Qp-pir"/>
+                                <constraint firstAttribute="height" constant="33" id="wyx-q0-WEG"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="截图" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmd-gf-Gc1">
+                            <rect key="frame" x="74" y="18" width="33" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ei-P9-sKi">
+                            <rect key="frame" x="273" y="23" width="62" height="30"/>
+                            <state key="normal" title="前往清理"/>
+                            <connections>
+                                <action selector="secendViewTap:" destination="-1" eventType="touchUpInside" id="EhT-zs-CDe"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="照片清理_箭头" translatesAutoresizingMaskIntoConstraints="NO" id="zvk-uo-6bk">
+                            <rect key="frame" x="341" y="31" width="6" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="14" id="YIm-dk-ffT"/>
+                                <constraint firstAttribute="width" constant="6" id="uQa-0Y-rb8"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2P-ui-lc8">
+                            <rect key="frame" x="74" y="48" width="7" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.53725490200000003" green="0.58431372550000005" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="OY3-wb-q0b" firstAttribute="leading" secondItem="kC2-4J-uM6" secondAttribute="leading" constant="20" id="549-kW-Qdo"/>
+                        <constraint firstAttribute="height" constant="76" id="6Mc-LV-0fK"/>
+                        <constraint firstItem="hmd-gf-Gc1" firstAttribute="centerY" secondItem="kC2-4J-uM6" secondAttribute="centerY" constant="-10" id="8F8-6E-Gfv"/>
+                        <constraint firstAttribute="trailing" secondItem="zvk-uo-6bk" secondAttribute="trailing" constant="8" id="Bf3-B8-uKF"/>
+                        <constraint firstItem="hmd-gf-Gc1" firstAttribute="leading" secondItem="OY3-wb-q0b" secondAttribute="trailing" constant="21" id="FSw-Vc-NtS"/>
+                        <constraint firstAttribute="trailing" secondItem="8Ei-P9-sKi" secondAttribute="trailing" constant="20" id="PIB-NJ-105"/>
+                        <constraint firstItem="8Ei-P9-sKi" firstAttribute="centerY" secondItem="kC2-4J-uM6" secondAttribute="centerY" id="YUB-44-aTP"/>
+                        <constraint firstItem="h2P-ui-lc8" firstAttribute="leading" secondItem="hmd-gf-Gc1" secondAttribute="leading" id="bMn-IO-dF6"/>
+                        <constraint firstItem="zvk-uo-6bk" firstAttribute="centerY" secondItem="kC2-4J-uM6" secondAttribute="centerY" id="ewj-7Z-IC6"/>
+                        <constraint firstItem="OY3-wb-q0b" firstAttribute="centerY" secondItem="kC2-4J-uM6" secondAttribute="centerY" id="hYs-j3-R2c"/>
+                        <constraint firstItem="h2P-ui-lc8" firstAttribute="top" secondItem="hmd-gf-Gc1" secondAttribute="bottom" constant="10" id="zas-RD-EdB"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="JBm-DJ-RWL" appends="YES" id="1bn-Oi-hAq"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVn-WA-mYa">
+                    <rect key="frame" x="10" y="302" width="355" height="76"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="照片清理_照片瘦身" translatesAutoresizingMaskIntoConstraints="NO" id="XNq-on-kwJ">
+                            <rect key="frame" x="20" y="21.5" width="33" height="33"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="33" id="qKD-o9-kOJ"/>
+                                <constraint firstAttribute="width" constant="33" id="qyn-yS-3t3"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="照片瘦身" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99V-HV-6XF">
+                            <rect key="frame" x="74" y="18" width="66" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqO-9f-0cE">
+                            <rect key="frame" x="273" y="23" width="62" height="30"/>
+                            <state key="normal" title="前往清理"/>
+                            <connections>
+                                <action selector="threeViewTap:" destination="-1" eventType="touchUpInside" id="nNa-Dl-WO8"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="照片清理_箭头" translatesAutoresizingMaskIntoConstraints="NO" id="kCx-kd-5Kb">
+                            <rect key="frame" x="341" y="31" width="6" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="6" id="9Nb-sw-5to"/>
+                                <constraint firstAttribute="height" constant="14" id="G9s-Yf-eMa"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mW1-uN-uOw">
+                            <rect key="frame" x="74" y="48" width="7" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.53725490200000003" green="0.58431372550000005" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="99V-HV-6XF" firstAttribute="centerY" secondItem="XVn-WA-mYa" secondAttribute="centerY" constant="-10" id="7EP-Ni-fZH"/>
+                        <constraint firstItem="XNq-on-kwJ" firstAttribute="centerY" secondItem="XVn-WA-mYa" secondAttribute="centerY" id="B60-fA-d42"/>
+                        <constraint firstItem="vqO-9f-0cE" firstAttribute="centerY" secondItem="XVn-WA-mYa" secondAttribute="centerY" id="D6P-re-u9j"/>
+                        <constraint firstAttribute="trailing" secondItem="vqO-9f-0cE" secondAttribute="trailing" constant="20" id="Imu-DA-azs"/>
+                        <constraint firstItem="mW1-uN-uOw" firstAttribute="leading" secondItem="99V-HV-6XF" secondAttribute="leading" id="JqC-ce-Pbj"/>
+                        <constraint firstItem="99V-HV-6XF" firstAttribute="leading" secondItem="XNq-on-kwJ" secondAttribute="trailing" constant="21" id="OAW-i0-Nir"/>
+                        <constraint firstItem="mW1-uN-uOw" firstAttribute="top" secondItem="99V-HV-6XF" secondAttribute="bottom" constant="10" id="aUQ-s3-3O5"/>
+                        <constraint firstAttribute="trailing" secondItem="kCx-kd-5Kb" secondAttribute="trailing" constant="8" id="g2i-FS-8J0"/>
+                        <constraint firstItem="kCx-kd-5Kb" firstAttribute="centerY" secondItem="XVn-WA-mYa" secondAttribute="centerY" id="lB8-Ef-0dO"/>
+                        <constraint firstItem="XNq-on-kwJ" firstAttribute="leading" secondItem="XVn-WA-mYa" secondAttribute="leading" constant="20" id="ssf-zK-70B"/>
+                        <constraint firstAttribute="height" constant="76" id="wmm-Lw-SFE"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="7s6-vC-c9m" appends="YES" id="OEO-X4-jWa"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="PWq-Oa-W4E" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="64m-XS-iYD"/>
+                <constraint firstItem="kC2-4J-uM6" firstAttribute="top" secondItem="vYp-vn-aXZ" secondAttribute="bottom" constant="20" id="82r-VK-J33"/>
+                <constraint firstItem="PWq-Oa-W4E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TK9-Hj-C7r"/>
+                <constraint firstItem="XVn-WA-mYa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Wfv-Bs-Nnj"/>
+                <constraint firstAttribute="trailing" secondItem="PWq-Oa-W4E" secondAttribute="trailing" id="baN-XO-77C"/>
+                <constraint firstItem="vYp-vn-aXZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="m6j-sd-q9p"/>
+                <constraint firstAttribute="trailing" secondItem="XVn-WA-mYa" secondAttribute="trailing" constant="10" id="mek-zv-baa"/>
+                <constraint firstAttribute="trailing" secondItem="vYp-vn-aXZ" secondAttribute="trailing" constant="12" id="qHd-gF-Rr0"/>
+                <constraint firstItem="XVn-WA-mYa" firstAttribute="top" secondItem="kC2-4J-uM6" secondAttribute="bottom" constant="20" id="wMe-90-gmj"/>
+                <constraint firstItem="kC2-4J-uM6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="wgb-lc-blf"/>
+                <constraint firstAttribute="trailing" secondItem="kC2-4J-uM6" secondAttribute="trailing" constant="10" id="x9j-sE-j6g"/>
+                <constraint firstItem="vYp-vn-aXZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="110" id="xCC-MV-d2j"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+        <tapGestureRecognizer id="qaD-5D-xZS" userLabel="firstTap">
+            <connections>
+                <action selector="firstViewClick:" destination="-1" id="CbR-lw-gEU"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="JBm-DJ-RWL" userLabel="secendTap">
+            <connections>
+                <action selector="secendViewTap:" destination="-1" id="uWI-hV-vka"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="7s6-vC-c9m" userLabel="threeTap">
+            <connections>
+                <action selector="threeViewTap:" destination="-1" id="KBX-OA-24D"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="照片清理_bg" width="375" height="88"/>
+        <image name="照片清理_截图" width="33" height="33"/>
+        <image name="照片清理_照片瘦身" width="30" height="27"/>
+        <image name="照片清理_箭头" width="6" height="14"/>
+        <image name="照片清理_重复照片" width="34" height="30"/>
+    </resources>
+</document>

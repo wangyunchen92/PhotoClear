@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ClearDetailViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="9lQ-yJ-TvA"/>
+                <outlet property="viewTopLayoutConstraint" destination="GUX-y1-5Sx" id="vwZ-ld-DwU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q81-o0-m02">
+                    <rect key="frame" x="0.0" y="64" width="375" height="132"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="完成" translatesAutoresizingMaskIntoConstraints="NO" id="6nS-Qt-sIB">
+                            <rect key="frame" x="50" y="31.5" width="83" height="69"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="优化已完成" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFc-Oe-rAg">
+                            <rect key="frame" x="153" y="43" width="111.5" height="26.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提速100%，手机使用更流畅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbB-RO-S7T">
+                            <rect key="frame" x="153" y="79.5" width="178.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.21176470588235294" green="0.52156862745098043" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                    <constraints>
+                        <constraint firstItem="fbB-RO-S7T" firstAttribute="leading" secondItem="OFc-Oe-rAg" secondAttribute="leading" id="2Qc-F2-AkL"/>
+                        <constraint firstItem="OFc-Oe-rAg" firstAttribute="leading" secondItem="6nS-Qt-sIB" secondAttribute="trailing" constant="20" id="62z-kg-zcC"/>
+                        <constraint firstItem="fbB-RO-S7T" firstAttribute="top" secondItem="OFc-Oe-rAg" secondAttribute="bottom" constant="10" id="7YX-xb-ihJ"/>
+                        <constraint firstItem="6nS-Qt-sIB" firstAttribute="leading" secondItem="Q81-o0-m02" secondAttribute="leading" constant="50" id="Blp-z5-jpY"/>
+                        <constraint firstItem="OFc-Oe-rAg" firstAttribute="centerY" secondItem="Q81-o0-m02" secondAttribute="centerY" constant="-10" id="XSW-8F-QI2"/>
+                        <constraint firstAttribute="height" constant="132" id="wRJ-1p-slm"/>
+                        <constraint firstItem="6nS-Qt-sIB" firstAttribute="centerY" secondItem="Q81-o0-m02" secondAttribute="centerY" id="yoj-8a-sKm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q81-o0-m02" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="GUX-y1-5Sx"/>
+                <constraint firstItem="Q81-o0-m02" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="o63-cz-JP0"/>
+                <constraint firstAttribute="trailing" secondItem="Q81-o0-m02" secondAttribute="trailing" id="oTx-DK-dI8"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="完成" width="83" height="69"/>
+    </resources>
+</document>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="bottomView">
+            <connections>
+                <outlet property="allButton" destination="QIk-9O-fLa" id="wKT-E6-SYO"/>
+                <outlet property="deleButton" destination="VEp-qt-zap" id="guQ-Ml-tQz"/>
+                <outlet property="view" destination="iN0-l3-epB" id="JPo-br-YPm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="469" height="45"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEp-qt-zap">
+                    <rect key="frame" x="305" y="5" width="144" height="35"/>
+                    <color key="backgroundColor" red="0.21176470589999999" green="0.52156862749999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="144" id="ptS-Ex-9ox"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="删除(张)">
+                        <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="deleButtonClick:" destination="-1" eventType="touchUpInside" id="XST-vS-ASh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIk-9O-fLa">
+                    <rect key="frame" x="20" y="5.5" width="46" height="34"/>
+                    <state key="normal" title="  全选">
+                        <color key="titleColor" red="0.21176470589999999" green="0.52156862749999999" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                    </state>
+                    <connections>
+                        <action selector="allButtonClick:" destination="-1" eventType="touchUpInside" id="GJL-2e-M74"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VEp-qt-zap" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="BFf-tl-u7M"/>
+                <constraint firstAttribute="trailing" secondItem="VEp-qt-zap" secondAttribute="trailing" constant="20" id="ITX-vf-6bp"/>
+                <constraint firstItem="QIk-9O-fLa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="KWh-pR-Pwy"/>
+                <constraint firstItem="QIk-9O-fLa" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="S1p-jJ-Pek"/>
+                <constraint firstItem="VEp-qt-zap" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="Vib-Ih-9eF"/>
+                <constraint firstAttribute="bottom" secondItem="VEp-qt-zap" secondAttribute="bottom" constant="5" id="k8j-vm-rHg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="367" y="-224"/>
+        </view>
+    </objects>
+</document>

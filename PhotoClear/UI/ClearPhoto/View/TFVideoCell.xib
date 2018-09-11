@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="132" id="dfw-R6-Sz6" customClass="TFVideoCell">
+            <rect key="frame" x="0.0" y="0.0" width="502" height="132"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dfw-R6-Sz6" id="LjH-Te-i0I">
+                <rect key="frame" x="0.0" y="0.0" width="502" height="131.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NBa-sQ-UG2">
+                        <rect key="frame" x="5" y="23.5" width="150" height="84"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="84" id="e2f-uE-Q0H"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="ly6-16-xCe"/>
+                            <constraint firstAttribute="width" constant="150" id="rZO-u6-6pP"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4f-Wr-eOC">
+                        <rect key="frame" x="160" y="23.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zoe-hK-DcB">
+                        <rect key="frame" x="160" y="86.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uev-dL-ihS">
+                        <rect key="frame" x="449" y="16" width="33" height="100"/>
+                        <state key="normal" image="删除"/>
+                        <connections>
+                            <action selector="delAction:" destination="dfw-R6-Sz6" eventType="touchUpInside" id="oNi-Gs-hRe"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NBa-sQ-UG2" firstAttribute="centerY" secondItem="LjH-Te-i0I" secondAttribute="centerY" id="7U1-3T-tkX"/>
+                    <constraint firstItem="D4f-Wr-eOC" firstAttribute="top" secondItem="NBa-sQ-UG2" secondAttribute="top" id="NW1-kY-Sni"/>
+                    <constraint firstItem="Zoe-hK-DcB" firstAttribute="leading" secondItem="D4f-Wr-eOC" secondAttribute="leading" id="SdY-6O-NgL"/>
+                    <constraint firstItem="uev-dL-ihS" firstAttribute="top" secondItem="LjH-Te-i0I" secondAttribute="topMargin" constant="5" id="TIa-Yg-4c9"/>
+                    <constraint firstItem="D4f-Wr-eOC" firstAttribute="leading" secondItem="NBa-sQ-UG2" secondAttribute="trailing" constant="5" id="WEU-Pm-evx"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="uev-dL-ihS" secondAttribute="trailing" id="ayg-eR-8QL"/>
+                    <constraint firstItem="uev-dL-ihS" firstAttribute="centerY" secondItem="LjH-Te-i0I" secondAttribute="centerY" id="ge8-gu-WFl"/>
+                    <constraint firstItem="Zoe-hK-DcB" firstAttribute="bottom" secondItem="NBa-sQ-UG2" secondAttribute="bottom" id="jai-uK-3ac"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="uev-dL-ihS" secondAttribute="bottom" constant="5" id="qXJ-gJ-Sxl"/>
+                    <constraint firstItem="NBa-sQ-UG2" firstAttribute="leading" secondItem="LjH-Te-i0I" secondAttribute="leading" constant="5" id="xB7-1y-WMb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="thumImageView" destination="NBa-sQ-UG2" id="71B-6f-ZZo"/>
+                <outlet property="timeLengthLabel" destination="Zoe-hK-DcB" id="QEI-xr-hjh"/>
+                <outlet property="videoNameLabel" destination="D4f-Wr-eOC" id="zMD-vV-0Go"/>
+            </connections>
+            <point key="canvasLocation" x="194" y="442"/>
+        </tableViewCell>
+        <tapGestureRecognizer id="hoj-ws-TTa"/>
+    </objects>
+    <resources>
+        <image name="删除" width="33" height="47"/>
+    </resources>
+</document>
