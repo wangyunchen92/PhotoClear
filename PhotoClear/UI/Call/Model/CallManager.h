@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <CallKit/CallKit.h>
 
+@class Model;
 API_AVAILABLE(ios(10.0))
+
 
 @interface CallManager : NSObject
 
@@ -49,5 +51,7 @@ API_AVAILABLE(ios(10.0))
  */
 
 - (BOOL)reload:(nullable void(^)(NSError * _Nullable error))completion;
+
+- (NSMutableArray <Model *>*)readFile;
 
 @end

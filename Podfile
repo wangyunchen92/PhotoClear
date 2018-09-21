@@ -16,6 +16,8 @@ pod 'YYText'
 pod 'CocoaLumberjack'
 pod 'OpenCV'
 pod 'WYCPagController'
+pod 'YYModel'
+pod 'XLForm', '~> 3.0'
 
   # Pods for PhotoClear
 
@@ -36,5 +38,14 @@ target 'PhotoClearCall' do
   # use_frameworks!
 
   # Pods for PhotoClearCall
+
+end
+
+target 'PhotoClearMessage' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+  pod 'YYModel'
+
+  # Pods for PhotoClearMessage
 
 end

@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		36FC17AFEA0E3ED7AE648728 /* libPods-PhotoClear.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F05B24CA18310B405C2F7B73 /* libPods-PhotoClear.a */; };
 		4302BF64256812D269BB1A56 /* libPods-PhotoClearCall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C13359010CC90F994FF252 /* libPods-PhotoClearCall.a */; };
+		A9BBA420BACAD967CCCEC731 /* libPods-PhotoClearMessage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C81146CE5AF68BFCF0CAA93 /* libPods-PhotoClearMessage.a */; };
 		CA0707D1C8A9F7B8D0A215B4 /* libPods-PhotoClearUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1566AA17EE68377B0BC54E12 /* libPods-PhotoClearUITests.a */; };
 		CA72307279D59DF634B0229D /* libPods-PhotoClearTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2042CBDB01CB15297166547E /* libPods-PhotoClearTests.a */; };
+		D501F364214A658A00CDF134 /* MessageFilterExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D501F363214A658A00CDF134 /* MessageFilterExtension.m */; };
+		D501F368214A658A00CDF134 /* PhotoClearMessage.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D501F360214A658A00CDF134 /* PhotoClearMessage.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D5048DF1212A8D5300D620D8 /* ClearGifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5048DEF212A8D5300D620D8 /* ClearGifViewController.m */; };
 		D5048DF2212A8D5300D620D8 /* ClearGifViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5048DF0212A8D5300D620D8 /* ClearGifViewController.xib */; };
 		D5048DF8212A8F9E00D620D8 /* ClearDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5048DF6212A8F9E00D620D8 /* ClearDetailViewController.m */; };
@@ -60,6 +63,17 @@
 		D517F12B213D0974002F2A89 /* PhotoClearCall.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D517F123213D0974002F2A89 /* PhotoClearCall.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D52016F92122A73800440DEF /* VideoClearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52016F72122A73800440DEF /* VideoClearViewController.m */; };
 		D52016FA2122A73800440DEF /* VideoClearViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D52016F82122A73800440DEF /* VideoClearViewController.xib */; };
+		D52C482E214B7D140002A1E5 /* MessageManage.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C482D214B7D140002A1E5 /* MessageManage.m */; };
+		D52C4831214B83350002A1E5 /* MessageGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C4830214B83350002A1E5 /* MessageGroup.m */; };
+		D52C4834214B836E0002A1E5 /* MessageRule.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C4833214B836E0002A1E5 /* MessageRule.m */; };
+		D52C4837214B838A0002A1E5 /* MessageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C4836214B838A0002A1E5 /* MessageRequest.m */; };
+		D52C483A214BAAA70002A1E5 /* MessageGroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C4839214BAAA60002A1E5 /* MessageGroupListViewController.m */; };
+		D52C483D214BAAAE0002A1E5 /* MessageListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C483C214BAAAE0002A1E5 /* MessageListCell.m */; };
+		D52C483F214BB0C70002A1E5 /* MessageGroupListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D52C483E214BB0C70002A1E5 /* MessageGroupListViewController.xib */; };
+		D52C4842214BB54B0002A1E5 /* MessageGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C4841214BB54B0002A1E5 /* MessageGroupViewController.m */; };
+		D52C4845214BB56D0002A1E5 /* MessageRuleChoseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C4843214BB56C0002A1E5 /* MessageRuleChoseViewController.m */; };
+		D52C4848214BB5730002A1E5 /* MessageRuleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C4846214BB5730002A1E5 /* MessageRuleCell.m */; };
+		D52C484A214BB5BE0002A1E5 /* MessageGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D52C4849214BB5BD0002A1E5 /* MessageGroupViewController.xib */; };
 		D53C9C59211C220700D02302 /* PictureClearListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D53C9C57211C220700D02302 /* PictureClearListViewController.m */; };
 		D53C9C5A211C220700D02302 /* PictureClearListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D53C9C58211C220700D02302 /* PictureClearListViewController.xib */; };
 		D548863A20FDC8650033537A /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = D548863720FDC8650033537A /* Config.m */; };
@@ -136,6 +150,10 @@
 		D54887BC20FDCBF80033537A /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D54887B720FDCBF70033537A /* LoginViewController.m */; };
 		D54887BD20FDCBF80033537A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D54887B820FDCBF70033537A /* LoginViewController.xib */; };
 		D54887BF20FDD3520033537A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D54887BE20FDD3510033537A /* main.m */; };
+		D56F59B2214F8DE20031566E /* MessageManage.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C482D214B7D140002A1E5 /* MessageManage.m */; };
+		D56F59B3214F8E070031566E /* MessageGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C4830214B83350002A1E5 /* MessageGroup.m */; };
+		D56F59B5214F8E070031566E /* MessageRule.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C4833214B836E0002A1E5 /* MessageRule.m */; };
+		D56F59B7214F8E070031566E /* MessageRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D52C4836214B838A0002A1E5 /* MessageRequest.m */; };
 		D5AE857421102AB2006F9A62 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AE857221102AB2006F9A62 /* MainViewController.m */; };
 		D5AE857521102AB2006F9A62 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5AE857321102AB2006F9A62 /* MainViewController.xib */; };
 		D5AE857821105C8A006F9A62 /* HWWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AE857621105C8A006F9A62 /* HWWaveView.m */; };
@@ -175,6 +193,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D501F366214A658A00CDF134 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5067FF120F7297900BB6A42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D501F35F214A658A00CDF134;
+			remoteInfo = PhotoClearMessage;
+		};
 		D506801220F7297C00BB6A42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5067FF120F7297900BB6A42 /* Project object */;
@@ -206,6 +231,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				D517F12B213D0974002F2A89 /* PhotoClearCall.appex in Embed App Extensions */,
+				D501F368214A658A00CDF134 /* PhotoClearMessage.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,12 +243,21 @@
 		1566AA17EE68377B0BC54E12 /* libPods-PhotoClearUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoClearUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2042CBDB01CB15297166547E /* libPods-PhotoClearTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoClearTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCA5FA71850A01E651801A2 /* Pods-PhotoClearUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoClearUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoClearUITests/Pods-PhotoClearUITests.release.xcconfig"; sourceTree = "<group>"; };
+		55005C686DB08DCBF794FCBC /* Pods-PhotoClearMessage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoClearMessage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoClearMessage/Pods-PhotoClearMessage.debug.xcconfig"; sourceTree = "<group>"; };
 		593AA34F83F6743D2C77AF48 /* Pods-PhotoClearTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoClearTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoClearTests/Pods-PhotoClearTests.release.xcconfig"; sourceTree = "<group>"; };
 		6B25E402D1B6FF71320FFEEA /* Pods-PhotoClear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoClear.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoClear/Pods-PhotoClear.release.xcconfig"; sourceTree = "<group>"; };
+		6C81146CE5AF68BFCF0CAA93 /* libPods-PhotoClearMessage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoClearMessage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C8EA475FF449FD25DA47990 /* Pods-PhotoClearTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoClearTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoClearTests/Pods-PhotoClearTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7192A91C657ACD2B7D399057 /* Pods-PhotoClearCall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoClearCall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoClearCall/Pods-PhotoClearCall.debug.xcconfig"; sourceTree = "<group>"; };
+		A3AA3A61F399ABBB96757D96 /* Pods-PhotoClearMessage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoClearMessage.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoClearMessage/Pods-PhotoClearMessage.release.xcconfig"; sourceTree = "<group>"; };
 		AB7426F31F6A88640656DBC1 /* Pods-PhotoClear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoClear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoClear/Pods-PhotoClear.debug.xcconfig"; sourceTree = "<group>"; };
 		CA51906962D24C8A487F9952 /* Pods-PhotoClearUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoClearUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoClearUITests/Pods-PhotoClearUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D501F349214A63AF00CDF134 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		D501F360214A658A00CDF134 /* PhotoClearMessage.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PhotoClearMessage.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D501F362214A658A00CDF134 /* MessageFilterExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageFilterExtension.h; sourceTree = "<group>"; };
+		D501F363214A658A00CDF134 /* MessageFilterExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageFilterExtension.m; sourceTree = "<group>"; };
+		D501F365214A658A00CDF134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D501F36C214A65A500CDF134 /* PhotoClearMessage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PhotoClearMessage.entitlements; sourceTree = "<group>"; };
 		D5048DEE212A8D5300D620D8 /* ClearGifViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClearGifViewController.h; sourceTree = "<group>"; };
 		D5048DEF212A8D5300D620D8 /* ClearGifViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClearGifViewController.m; sourceTree = "<group>"; };
 		D5048DF0212A8D5300D620D8 /* ClearGifViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClearGifViewController.xib; sourceTree = "<group>"; };
@@ -322,6 +357,26 @@
 		D52016F62122A73800440DEF /* VideoClearViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoClearViewController.h; sourceTree = "<group>"; };
 		D52016F72122A73800440DEF /* VideoClearViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoClearViewController.m; sourceTree = "<group>"; };
 		D52016F82122A73800440DEF /* VideoClearViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoClearViewController.xib; sourceTree = "<group>"; };
+		D52C482C214B7D140002A1E5 /* MessageManage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageManage.h; sourceTree = "<group>"; };
+		D52C482D214B7D140002A1E5 /* MessageManage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageManage.m; sourceTree = "<group>"; };
+		D52C482F214B83350002A1E5 /* MessageGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageGroup.h; sourceTree = "<group>"; };
+		D52C4830214B83350002A1E5 /* MessageGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageGroup.m; sourceTree = "<group>"; };
+		D52C4832214B836E0002A1E5 /* MessageRule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageRule.h; sourceTree = "<group>"; };
+		D52C4833214B836E0002A1E5 /* MessageRule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageRule.m; sourceTree = "<group>"; };
+		D52C4835214B838A0002A1E5 /* MessageRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageRequest.h; sourceTree = "<group>"; };
+		D52C4836214B838A0002A1E5 /* MessageRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageRequest.m; sourceTree = "<group>"; };
+		D52C4838214BAAA60002A1E5 /* MessageGroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageGroupListViewController.h; sourceTree = "<group>"; };
+		D52C4839214BAAA60002A1E5 /* MessageGroupListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageGroupListViewController.m; sourceTree = "<group>"; };
+		D52C483B214BAAAE0002A1E5 /* MessageListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListCell.h; sourceTree = "<group>"; };
+		D52C483C214BAAAE0002A1E5 /* MessageListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListCell.m; sourceTree = "<group>"; };
+		D52C483E214BB0C70002A1E5 /* MessageGroupListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageGroupListViewController.xib; sourceTree = "<group>"; };
+		D52C4840214BB54A0002A1E5 /* MessageGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageGroupViewController.h; sourceTree = "<group>"; };
+		D52C4841214BB54B0002A1E5 /* MessageGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageGroupViewController.m; sourceTree = "<group>"; };
+		D52C4843214BB56C0002A1E5 /* MessageRuleChoseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageRuleChoseViewController.m; sourceTree = "<group>"; };
+		D52C4844214BB56C0002A1E5 /* MessageRuleChoseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageRuleChoseViewController.h; sourceTree = "<group>"; };
+		D52C4846214BB5730002A1E5 /* MessageRuleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageRuleCell.m; sourceTree = "<group>"; };
+		D52C4847214BB5730002A1E5 /* MessageRuleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageRuleCell.h; sourceTree = "<group>"; };
+		D52C4849214BB5BD0002A1E5 /* MessageGroupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageGroupViewController.xib; sourceTree = "<group>"; };
 		D53C9C56211C220700D02302 /* PictureClearListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PictureClearListViewController.h; sourceTree = "<group>"; };
 		D53C9C57211C220700D02302 /* PictureClearListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureClearListViewController.m; sourceTree = "<group>"; };
 		D53C9C58211C220700D02302 /* PictureClearListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureClearListViewController.xib; sourceTree = "<group>"; };
@@ -536,6 +591,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D501F35D214A658A00CDF134 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9BBA420BACAD967CCCEC731 /* libPods-PhotoClearMessage.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5067FF620F7297900BB6A42 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -584,8 +647,21 @@
 				593AA34F83F6743D2C77AF48 /* Pods-PhotoClearTests.release.xcconfig */,
 				CA51906962D24C8A487F9952 /* Pods-PhotoClearUITests.debug.xcconfig */,
 				2CCA5FA71850A01E651801A2 /* Pods-PhotoClearUITests.release.xcconfig */,
+				55005C686DB08DCBF794FCBC /* Pods-PhotoClearMessage.debug.xcconfig */,
+				A3AA3A61F399ABBB96757D96 /* Pods-PhotoClearMessage.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D501F361214A658A00CDF134 /* PhotoClearMessage */ = {
+			isa = PBXGroup;
+			children = (
+				D501F36C214A65A500CDF134 /* PhotoClearMessage.entitlements */,
+				D501F362214A658A00CDF134 /* MessageFilterExtension.h */,
+				D501F363214A658A00CDF134 /* MessageFilterExtension.m */,
+				D501F365214A658A00CDF134 /* Info.plist */,
+			);
+			path = PhotoClearMessage;
 			sourceTree = "<group>";
 		};
 		D5067FF020F7297900BB6A42 = {
@@ -595,6 +671,7 @@
 				D506801420F7297C00BB6A42 /* PhotoClearTests */,
 				D506801F20F7297C00BB6A42 /* PhotoClearUITests */,
 				D517F124213D0974002F2A89 /* PhotoClearCall */,
+				D501F361214A658A00CDF134 /* PhotoClearMessage */,
 				D5067FFA20F7297900BB6A42 /* Products */,
 				9754136C9683535B958F3CC2 /* Pods */,
 				EE1DA54752A03B9275934F8C /* Frameworks */,
@@ -608,6 +685,7 @@
 				D506801120F7297C00BB6A42 /* PhotoClearTests.xctest */,
 				D506801C20F7297C00BB6A42 /* PhotoClearUITests.xctest */,
 				D517F123213D0974002F2A89 /* PhotoClearCall.appex */,
+				D501F360214A658A00CDF134 /* PhotoClearMessage.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -790,6 +868,65 @@
 				D517F128213D0974002F2A89 /* Info.plist */,
 			);
 			path = PhotoClearCall;
+			sourceTree = "<group>";
+		};
+		D52C4827214B7CF90002A1E5 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				D52C4828214B7CF90002A1E5 /* ViewModel */,
+				D52C4829214B7CF90002A1E5 /* Model */,
+				D52C482A214B7CF90002A1E5 /* View */,
+				D52C482B214B7CF90002A1E5 /* ViewController */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		D52C4828214B7CF90002A1E5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D52C482C214B7D140002A1E5 /* MessageManage.h */,
+				D52C482D214B7D140002A1E5 /* MessageManage.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D52C4829214B7CF90002A1E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D52C482F214B83350002A1E5 /* MessageGroup.h */,
+				D52C4830214B83350002A1E5 /* MessageGroup.m */,
+				D52C4832214B836E0002A1E5 /* MessageRule.h */,
+				D52C4833214B836E0002A1E5 /* MessageRule.m */,
+				D52C4835214B838A0002A1E5 /* MessageRequest.h */,
+				D52C4836214B838A0002A1E5 /* MessageRequest.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D52C482A214B7CF90002A1E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D52C483B214BAAAE0002A1E5 /* MessageListCell.h */,
+				D52C483C214BAAAE0002A1E5 /* MessageListCell.m */,
+				D52C4847214BB5730002A1E5 /* MessageRuleCell.h */,
+				D52C4846214BB5730002A1E5 /* MessageRuleCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D52C482B214B7CF90002A1E5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D52C4838214BAAA60002A1E5 /* MessageGroupListViewController.h */,
+				D52C4839214BAAA60002A1E5 /* MessageGroupListViewController.m */,
+				D52C483E214BB0C70002A1E5 /* MessageGroupListViewController.xib */,
+				D52C4840214BB54A0002A1E5 /* MessageGroupViewController.h */,
+				D52C4841214BB54B0002A1E5 /* MessageGroupViewController.m */,
+				D52C4849214BB5BD0002A1E5 /* MessageGroupViewController.xib */,
+				D52C4844214BB56C0002A1E5 /* MessageRuleChoseViewController.h */,
+				D52C4843214BB56C0002A1E5 /* MessageRuleChoseViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		D548863420FDC8650033537A /* Support */ = {
@@ -1222,6 +1359,7 @@
 		D54887C020FDDCCD0033537A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D52C4827214B7CF90002A1E5 /* Message */,
 				D5E47A7F21464F3300056589 /* Call */,
 				D51051C9212E865E00E5D216 /* ClearPhoto */,
 				D5EF794A2123F368007C7852 /* NewforHeadline */,
@@ -1439,6 +1577,8 @@
 				F1C13359010CC90F994FF252 /* libPods-PhotoClearCall.a */,
 				2042CBDB01CB15297166547E /* libPods-PhotoClearTests.a */,
 				1566AA17EE68377B0BC54E12 /* libPods-PhotoClearUITests.a */,
+				D501F349214A63AF00CDF134 /* Messages.framework */,
+				6C81146CE5AF68BFCF0CAA93 /* libPods-PhotoClearMessage.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1446,6 +1586,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D501F35F214A658A00CDF134 /* PhotoClearMessage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D501F369214A658A00CDF134 /* Build configuration list for PBXNativeTarget "PhotoClearMessage" */;
+			buildPhases = (
+				7E995ABB77F16AC034F77A2B /* [CP] Check Pods Manifest.lock */,
+				D501F35C214A658A00CDF134 /* Sources */,
+				D501F35D214A658A00CDF134 /* Frameworks */,
+				D501F35E214A658A00CDF134 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoClearMessage;
+			productName = PhotoClearMessage;
+			productReference = D501F360214A658A00CDF134 /* PhotoClearMessage.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		D5067FF820F7297900BB6A42 /* PhotoClear */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D506802520F7297C00BB6A42 /* Build configuration list for PBXNativeTarget "PhotoClear" */;
@@ -1454,13 +1612,14 @@
 				D5067FF520F7297900BB6A42 /* Sources */,
 				D5067FF620F7297900BB6A42 /* Frameworks */,
 				D5067FF720F7297900BB6A42 /* Resources */,
-				DBBD8193ECCF6C981A26CE14 /* [CP] Copy Pods Resources */,
 				D517F12F213D0974002F2A89 /* Embed App Extensions */,
+				6817D344450AC88B6E9F0D3A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				D517F12A213D0974002F2A89 /* PBXTargetDependency */,
+				D501F367214A658A00CDF134 /* PBXTargetDependency */,
 			);
 			name = PhotoClear;
 			productName = PhotoClear;
@@ -1532,6 +1691,14 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Sj03;
 				TargetAttributes = {
+					D501F35F214A658A00CDF134 = {
+						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					D5067FF820F7297900BB6A42 = {
 						CreatedOnToolsVersion = 9.4.1;
 						SystemCapabilities = {
@@ -1575,11 +1742,19 @@
 				D506801020F7297C00BB6A42 /* PhotoClearTests */,
 				D506801B20F7297C00BB6A42 /* PhotoClearUITests */,
 				D517F122213D0974002F2A89 /* PhotoClearCall */,
+				D501F35F214A658A00CDF134 /* PhotoClearMessage */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D501F35E214A658A00CDF134 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5067FF720F7297900BB6A42 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1589,6 +1764,7 @@
 				D5F688C42112E3CC007A32F1 /* MainCellView.xib in Resources */,
 				D54887BD20FDCBF80033537A /* LoginViewController.xib in Resources */,
 				D548875220FDC87C0033537A /* WSDatePickerView.xib in Resources */,
+				D52C484A214BB5BE0002A1E5 /* MessageGroupViewController.xib in Resources */,
 				D548872F20FDC87C0033537A /* address.json in Resources */,
 				D5EF796E2123F369007C7852 /* OneImageTableViewCell.xib in Resources */,
 				D53C9C5A211C220700D02302 /* PictureClearListViewController.xib in Resources */,
@@ -1603,6 +1779,7 @@
 				D548877320FDC9310033537A /* Assets.xcassets in Resources */,
 				D5105235212E865F00E5D216 /* bottomView.xib in Resources */,
 				D5E47A8821464F7200056589 /* CallViewController.xib in Resources */,
+				D52C483F214BB0C70002A1E5 /* MessageGroupListViewController.xib in Resources */,
 				D510523A212E865F00E5D216 /* TFVideoCell.xib in Resources */,
 				D5EF79762123F369007C7852 /* NewWebViewController.xib in Resources */,
 				D548873A20FDC87C0033537A /* HZLaunchImageViewController.xib in Resources */,
@@ -1651,6 +1828,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6817D344450AC88B6E9F0D3A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PhotoClear/Pods-PhotoClear-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/XLForm/XLForm/XLForm.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/XLForm.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoClear/Pods-PhotoClear-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6837368209078E666E8401C9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1663,6 +1860,24 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-PhotoClearCall-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E995ABB77F16AC034F77A2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoClearMessage-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1705,27 +1920,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DBBD8193ECCF6C981A26CE14 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PhotoClear/Pods-PhotoClear-resources.sh",
-				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoClear/Pods-PhotoClear-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D501F35C214A658A00CDF134 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56F59B3214F8E070031566E /* MessageGroup.m in Sources */,
+				D56F59B5214F8E070031566E /* MessageRule.m in Sources */,
+				D56F59B7214F8E070031566E /* MessageRequest.m in Sources */,
+				D56F59B2214F8DE20031566E /* MessageManage.m in Sources */,
+				D501F364214A658A00CDF134 /* MessageFilterExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5067FF520F7297900BB6A42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1742,6 +1951,7 @@
 				D548879520FDC93E0033537A /* HttpRequestMode.m in Sources */,
 				D548873E20FDC87C0033537A /* NSTimer+addition.m in Sources */,
 				D548863A20FDC8650033537A /* Config.m in Sources */,
+				D52C4848214BB5730002A1E5 /* MessageRuleCell.m in Sources */,
 				D5EF79712123F369007C7852 /* OneImageTableViewCell.m in Sources */,
 				D5EF79742123F369007C7852 /* NewHeadlineViewController.m in Sources */,
 				D5105225212E865E00E5D216 /* LXPlayModel.m in Sources */,
@@ -1761,6 +1971,7 @@
 				D548874A20FDC87C0033537A /* NavigationBarUIUtil.m in Sources */,
 				D548875120FDC87C0033537A /* SimpleNavigationBar.m in Sources */,
 				D548876120FDC87C0033537A /* NSString+Extension.m in Sources */,
+				D52C4845214BB56D0002A1E5 /* MessageRuleChoseViewController.m in Sources */,
 				D5105219212E865E00E5D216 /* playerViewController.m in Sources */,
 				D54887AC20FDCBDC0033537A /* BaseViewController.m in Sources */,
 				D5105230212E865E00E5D216 /* WKVideoManage.m in Sources */,
@@ -1772,8 +1983,10 @@
 				D54887AD20FDCBDC0033537A /* BaseViewModel.m in Sources */,
 				D54887BC20FDCBF80033537A /* LoginViewController.m in Sources */,
 				D548873B20FDC87C0033537A /* HZLaunchImageViewController.m in Sources */,
+				D52C4831214B83350002A1E5 /* MessageGroup.m in Sources */,
 				D548875820FDC87C0033537A /* UIButton+TouchAreaInsets.m in Sources */,
 				D54887AB20FDCBDC0033537A /* UserInfo.m in Sources */,
+				D52C4842214BB54B0002A1E5 /* MessageGroupViewController.m in Sources */,
 				D5105238212E865F00E5D216 /* bottomView.m in Sources */,
 				D5EF79702123F369007C7852 /* YMWebProgressLayer.m in Sources */,
 				D548879B20FDC93E0033537A /* HttpClient.m in Sources */,
@@ -1786,6 +1999,7 @@
 				D5105226212E865E00E5D216 /* LXAVPlayControllView.m in Sources */,
 				D5F688C72112E3E6007A32F1 /* MainCellView.m in Sources */,
 				D510521D212E865E00E5D216 /* UITabBarController+LXPlayerRotation.m in Sources */,
+				D52C483A214BAAA70002A1E5 /* MessageGroupListViewController.m in Sources */,
 				D548876620FDC87C0033537A /* UIButton+UIButtonExt.m in Sources */,
 				D510522A212E865E00E5D216 /* UIImage+LXAVPlayer.m in Sources */,
 				D5048DF1212A8D5300D620D8 /* ClearGifViewController.m in Sources */,
@@ -1796,6 +2010,7 @@
 				D5048DF8212A8F9E00D620D8 /* ClearDetailViewController.m in Sources */,
 				D50D390C21197228000CF014 /* MainViewDataModel.m in Sources */,
 				D548874920FDC87C0033537A /* ToolUtil.m in Sources */,
+				D52C482E214B7D140002A1E5 /* MessageManage.m in Sources */,
 				D5E5F86F21355C8F00D387EC /* YCPhotoBrowserConst.m in Sources */,
 				D5105217212E865E00E5D216 /* WKClearPhotoViewController.m in Sources */,
 				D5E5F86C21355C8F00D387EC /* UIView+YCExtension.m in Sources */,
@@ -1805,8 +2020,10 @@
 				D548874C20FDC87C0033537A /* UIUtil.m in Sources */,
 				D548875620FDC87C0033537A /* XWPresentOneTransition.m in Sources */,
 				D5105236212E865F00E5D216 /* WKSimilarPhotoCell.m in Sources */,
+				D52C483D214BAAAE0002A1E5 /* MessageListCell.m in Sources */,
 				D54887A020FDC93E0033537A /* NSMutableDictionary+Utils.m in Sources */,
 				D548879C20FDC93E0033537A /* HttpResponse.m in Sources */,
+				D52C4837214B838A0002A1E5 /* MessageRequest.m in Sources */,
 				D510521F212E865E00E5D216 /* UILabel+LXLabel.m in Sources */,
 				D510521B212E865E00E5D216 /* LXAVPlayView.m in Sources */,
 				D5067FFE20F7297900BB6A42 /* AppDelegate.m in Sources */,
@@ -1845,6 +2062,7 @@
 				D5E5F86E21355C8F00D387EC /* YCPhotoBrowserCellHelper.m in Sources */,
 				D507C55F212552D400817F81 /* UICountingLabel.m in Sources */,
 				D5EF796F2123F369007C7852 /* ThreeImageTableViewCell.m in Sources */,
+				D52C4834214B836E0002A1E5 /* MessageRule.m in Sources */,
 				D5105228212E865E00E5D216 /* LXSliderView.m in Sources */,
 				D5105233212E865E00E5D216 /* WKClearPhotoCell.m in Sources */,
 				D510521C212E865E00E5D216 /* LXPlayLoadingView.m in Sources */,
@@ -1893,6 +2111,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D501F367214A658A00CDF134 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D501F35F214A658A00CDF134 /* PhotoClearMessage */;
+			targetProxy = D501F366214A658A00CDF134 /* PBXContainerItemProxy */;
+		};
 		D506801320F7297C00BB6A42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D5067FF820F7297900BB6A42 /* PhotoClear */;
@@ -1911,6 +2134,73 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		D501F36A214A658A00CDF134 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55005C686DB08DCBF794FCBC /* Pods-PhotoClearMessage.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PhotoClearMessage/PhotoClearMessage.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = BXNJAEDFYS;
+				ENABLE_BITCODE = NO;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = PhotoClearMessage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/YYModel\"",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PhotoClear.youmeng.PhotoClearMessage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "01837fe4-6368-4358-b21c-0c473972a3e8";
+				PROVISIONING_PROFILE_SPECIFIER = clearMessage;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D501F36B214A658A00CDF134 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3AA3A61F399ABBB96757D96 /* Pods-PhotoClearMessage.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PhotoClearMessage/PhotoClearMessage.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = PhotoClearMessage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/YYModel\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.PhotoClear.youmeng.PhotoClearMessage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		D506802320F7297C00BB6A42 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2041,8 +2331,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PhotoClear/Support/PrefixHeader.pch";
 				INFOPLIST_FILE = PhotoClear/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PhotoClear.youmeng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2072,8 +2365,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PhotoClear/Support/PrefixHeader.pch";
 				INFOPLIST_FILE = PhotoClear/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PhotoClear.youmeng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2090,7 +2386,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PhotoClearTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = wanghyunchen.PhotoClearTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2105,7 +2405,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PhotoClearTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = wanghyunchen.PhotoClearTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2119,7 +2423,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PhotoClearUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = wanghyunchen.PhotoClearUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2133,7 +2441,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PhotoClearUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = wanghyunchen.PhotoClearUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2152,7 +2464,11 @@
 				DEVELOPMENT_TEAM = BXNJAEDFYS;
 				INFOPLIST_FILE = PhotoClearCall/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.PhotoClear.youmeng.PhotoClearCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2171,7 +2487,11 @@
 				DEVELOPMENT_TEAM = BXNJAEDFYS;
 				INFOPLIST_FILE = PhotoClearCall/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.PhotoClear.youmeng.PhotoClearCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2182,6 +2502,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D501F369214A658A00CDF134 /* Build configuration list for PBXNativeTarget "PhotoClearMessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D501F36A214A658A00CDF134 /* Debug */,
+				D501F36B214A658A00CDF134 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D5067FF420F7297900BB6A42 /* Build configuration list for PBXProject "PhotoClear" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

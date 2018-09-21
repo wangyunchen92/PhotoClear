@@ -18,6 +18,7 @@
 #import "AboutUsViewController.h"
 
 #import "CallViewController.h"
+#import "MessageGroupListViewController.h"
 
 #import "AppDelegate.h"
 #import "UICountingLabel.h"
@@ -125,10 +126,11 @@
         vc = [[ClearGifViewController alloc] init];
     }
     if (tag == 1) {
-        vc = [[CallViewController alloc] init];
+      MessageGroupListViewController * vcs = [[MessageGroupListViewController alloc] initWithListType:MessageGroupListTypeBlackList];
+        [self.navigationController pushViewController:vcs animated:YES];
     }
     if (tag == 2) {
-        vc = [[BatterViewController alloc] init];
+        vc = [[CallViewController alloc] init];
     }
     if (tag == 3) {
         vc = [[VideoClearViewController alloc] init];

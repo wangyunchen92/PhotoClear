@@ -7,13 +7,14 @@
 //
 
 #import "CallManager.h"
+#import "Model.h"
 
 @interface CallManager ()
 @property (nonatomic , strong) NSString *externsionIdentifier;
 
 @property (nonatomic, strong) NSString *groupIdentifier;
 /** 存储待写入电话号码与标识，key：号码，value：标识 **/
-@property (nonatomic, strong) NSMutableDictionary *dataList;
+@property (nonatomic, strong) NSMutableArray <Model *> *dataList;
 /** 带国家码的手机号 **/
 @property (nonatomic, strong)NSPredicate *phoneNumberWithNationCodePredicate;
 /** 不带国家码的手机号 **/
@@ -57,24 +58,44 @@ static CallManager * manager;
     if (!phoneNumber || ![phoneNumber isKindOfClass:[NSString class]] || !name|| ![name isKindOfClass:[NSString class]]|| name.length == 0) {
         return NO;
     }
+    
     NSString *handledPhoneNumber = [self handlePhoneNumber:phoneNumber];
+    __block BOOL isreturn = YES;
     if (handledPhoneNumber) {
-        if (self.dataList[handledPhoneNumber]) {
-            return NO;
-        }
+        [self.dataList enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(Model * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (idx >=100) {
+                isreturn = YES;
+                *stop = YES;
+            } else {
+                if (obj.number == handledPhoneNumber) {
+                    isreturn = NO;
+                    *stop = YES;
+                }
+            }
+        }];
+        
     } else {
         handledPhoneNumber = [self handleTelePhoneNumber:phoneNumber];
-        if (handledPhoneNumber) {
-            if (self.dataList[handledPhoneNumber]) {
-                return NO;
+        [self.dataList enumerateObjectsWithOptions:NSEnumerationReverse usingBlock:^(Model * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (idx >=100) {
+                isreturn = YES;
+                *stop = YES;
+            } else {
+                if (obj.number == handledPhoneNumber) {
+                    isreturn = NO;
+                    *stop = YES;
+                }
             }
-        } else {
-            return NO;
-        }
+        }];
+    }
+    if (isreturn == YES) {
+        Model *model = [[Model alloc] init];
+        model.number =handledPhoneNumber;
+        model.name = name;
+        [self.dataList addObject:model];
     }
     
-    [self.dataList setObject:name forKey:handledPhoneNumber];
-    return YES;
+    return isreturn;
 }
 
 - (BOOL)reload:(void (^)(NSError * _Nullable))completion {
@@ -150,22 +171,28 @@ static CallManager * manager;
  对dataList中的记录进行升序排序，然后转换为string
  */
 - (NSString *)dataToString {
-    //    NSMutableArray *phoneArray = [NSMutableArray arrayWithArray:[self.dataList allKeys]];
+//        NSMutableArray *phoneArray = [NSMutableArray arrayWithArray:[self.dataList allKeys]];
     
-    NSMutableArray *phoneArray = [NSMutableArray array];
-    for (NSString * key in self.dataList) {
-        NSNumber * num = [NSNumber numberWithInteger:[key integerValue]];
-        [phoneArray addObject:num];
-    }
-    [phoneArray sortUsingSelector:@selector(compare:)];
+//    NSMutableArray *phoneArray = [NSMutableArray array];
+//    for (NSString * key in self.dataList) {
+//        NSNumber * num = [NSNumber numberWithInteger:[key integerValue]];
+//        [phoneArray addObject:num];
+//    }
+    
+//    [phoneArray sortUsingSelector:@selector(compare:)];
     
     NSMutableString *dataStr = [[NSMutableString alloc] init];
     
-    for (NSNumber *phone in phoneArray) {
-        NSString *label = self.dataList[phone.stringValue];
-        NSString *dicStr = [NSString stringWithFormat:@"{\"%@\":\"%@\"}\n", phone, label];
+    [self.dataList enumerateObjectsUsingBlock:^(Model * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *dicStr = [NSString stringWithFormat:@"{\"%@\":\"%@\"}\n", obj.name, obj.number];
         [dataStr appendString:dicStr];
-    }
+    }];
+    
+//    for (NSNumber *phone in phoneArray) {
+//        NSString *label = self.dataList[phone.stringValue];
+//        NSString *dicStr = [NSString stringWithFormat:@"{\"%@\":\"%@\"}\n", phone, label];
+//        [dataStr appendString:dicStr];
+//    }
     
     return [dataStr copy];
 }
@@ -190,14 +217,14 @@ static CallManager * manager;
     }
     NSLog(@"CallDirectoryDataPath - %@",filePath);
     BOOL result = [[self dataToString] writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
-    [self clearPhoneNumber];
+//    [self clearPhoneNumber];
     return result;
 }
 
 #pragma mark -Getter
-- (NSMutableDictionary *)dataList {
+- (NSMutableArray *)dataList {
     if (!_dataList) {
-        _dataList = [NSMutableDictionary dictionary];
+        _dataList = [[NSMutableArray alloc] init];
     }
     return _dataList;
 }
@@ -235,6 +262,44 @@ static CallManager * manager;
     return YES;
 }
 
+
+- (NSMutableArray <Model *>*)readFile {
+    NSURL *containerURL = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:AppGroupIdentifier];
+    //TODO: 必须填写文件名
+    containerURL = [containerURL URLByAppendingPathComponent:@"CallDirectoryData"];
+    FILE *file = fopen([containerURL.path UTF8String], "r");
+    char buffer[1024];
+    
+    NSMutableArray *mutArr = [[NSMutableArray alloc] init];
+    // 一行一行的读，避免爆内存
+    while (fgets(buffer, 1024, file) != NULL) {
+        @autoreleasepool {
+            NSString *result = [NSString stringWithUTF8String:buffer];
+            NSData *jsonData = [result dataUsingEncoding:NSUTF8StringEncoding];
+            NSError *err;
+            NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&err];
+            NSLog(@"%@",dic);
+            if(!err && dic && [dic isKindOfClass:[NSDictionary class]]) {
+                NSString *number = dic.allKeys[0];
+                NSString *name = dic[number];
+                if (number && [number isKindOfClass:[NSString class]] &&
+                    name && [name isKindOfClass:[NSString class]]) {
+                    Model *model = [[Model alloc] init];
+                    model.name = name;
+                    model.number = number;
+                    [mutArr addObject:model];
+                }
+            }
+            
+            dic = nil;
+            result = nil;
+            jsonData = nil;
+            err = nil;
+        }
+    }
+    fclose(file);
+    return mutArr;
+}
 
 
 @end
